@@ -264,6 +264,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2 \
     CarrierConfigOverlay \
     libjson \
     libril \
