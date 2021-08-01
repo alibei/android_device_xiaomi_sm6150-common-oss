@@ -1,5 +1,9 @@
+type hal_livedisplay_hwservice, hwservice_manager_type;
+
 type sysfs_anti_flicker, sysfs_type, fs_type;
 type sysfs_hbm, sysfs_type, fs_type;
 
 allow hal_lineage_livedisplay_qti sysfs_anti_flicker:file rw_file_perms;
 allow hal_lineage_livedisplay_qti sysfs_hbm:file rw_file_perms;
+
+add_hwservice(hal_lineage_livedisplay_qti, hal_livedisplay_hwservice)
