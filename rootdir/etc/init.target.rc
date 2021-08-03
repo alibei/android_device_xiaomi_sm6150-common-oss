@@ -111,6 +111,9 @@ on property:sys.boot_completed=1
     write /sys/block/sde/queue/nr_requests 128
     write /sys/block/sde/queue/iostats 1
 
+    # Fastcharge
+    start init-fastcharge-sh
+
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
@@ -175,4 +178,11 @@ service vendor.nv_mac /vendor/bin/nv_mac
     class main
     user system
     group system inet net_admin wifi net_raw
+    oneshot
+
+service init-fastcharge-sh /vendor/bin/init.fastcharge.sh
+    class main
+    user root
+    group root system
+    disabled
     oneshot
