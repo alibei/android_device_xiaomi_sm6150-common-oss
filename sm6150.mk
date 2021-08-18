@@ -90,7 +90,10 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libdng_sdk.vendor
+    libc++demangle_vendor \
+    libdng_sdk.vendor \
+    libgui_vendor \
+    libxml2
 
 PRODUCT_PACKAGES += \
     Snap
